@@ -1,5 +1,5 @@
 public class Kafe01 {
-    public static void Menu(String namaPelanggan, boolean isMember) {
+    public static void Menu(String namaPelanggan, boolean isMember, String kodePromo) {
         System.out.println("Selamat datang, " + namaPelanggan + "!");
 
         if (isMember){
@@ -16,8 +16,16 @@ public class Kafe01 {
         System.out.println("===========================");
         System.out.println("Silahkan pilih menu yang Anda inginkan.");
 
+        if (kodePromo.equalsIgnoreCase("DISKON50")){
+            System.out.println("Anda mendapatkan diskon sebesar 50%.");
+        } else if (kodePromo.equalsIgnoreCase("DISKON30")){
+            System.out.println("Anda mendapatkan diskon sebesar 30%.");
+        } else {
+            System.out.println("Kode Promo tidak valid!");
+        }
+
     }
     public static void main(String[] args) {
-        Menu("Andi", true);
+        Menu("Andi", true, "DISKON50");
     }
 }
