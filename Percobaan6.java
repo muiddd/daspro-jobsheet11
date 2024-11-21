@@ -27,5 +27,7 @@ public class Percobaan6 {
 
         vol = hitungVolume(t, p, l);
         System.out.println("Volume balok adalah " + vol);
+
+        sc.close();
     }
 }
